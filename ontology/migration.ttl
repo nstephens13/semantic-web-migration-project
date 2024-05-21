@@ -1,0 +1,267 @@
+#################################################################
+
+@prefix : 		<https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/#> .
+@prefix : 		<https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#> .
+@base 			<https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#> .
+
+<https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#> rdf:type owl:Ontology ;
+                                                                                                                          dc:title "Migration"@en; 
+                                                                                                                          dc:description "New ontology description"@en . 
+###  Property Definitions (Number of Property) 34 ###
+#  --------------------------- Property 0------------------------- 
+:with_permanent_residence_permit rdf:type owl:DatatypeProperty ;
+                                 rdfs:label "with_permanent_residence_permit"@IRI-based; 
+                                 rdfs:label "with_permanent_residence_permit"@iri-based; 
+                                 rdfs:label "with permanent residence permit"@en; 
+                                 rdfs:domain :Residence_Status;
+                                 rdfs:range xsd:integer . 
+#  --------------------------- Property 1------------------------- 
+:with_permission_to_remain rdf:type owl:DatatypeProperty ;
+                           rdfs:label "with_permission_to_remain"@IRI-based; 
+                           rdfs:label "with permission to remain"@en; 
+                           rdfs:domain :Residence_Status;
+                           rdfs:range xsd:integer . 
+#  --------------------------- Property 2------------------------- 
+:year rdf:type owl:DatatypeProperty ;
+      rdfs:label "year"@IRI-based; 
+      rdfs:label "year"@iri-based; 
+      rdfs:label "year"@en; 
+      rdfs:domain :City;
+      rdfs:range xsd:integer . 
+#  --------------------------- Property 3------------------------- 
+:hasForeigners rdf:type owl:ObjectProperty ;
+               rdfs:label "hasForeigners"@IRI-based; 
+               rdfs:label "hasForeigners"@iri-based; 
+               rdfs:label "hasForeigners"@en; 
+               rdfs:domain :Population;
+               rdfs:range :Foreigners . 
+#  --------------------------- Property 4------------------------- 
+:with_permission_to_remain_untill_deported rdf:type owl:DatatypeProperty ;
+                                           rdfs:label "with_permission_to_remain_untill_deported"@IRI-based; 
+                                           rdfs:label "with permission to remain untill deported"@en; 
+                                           rdfs:domain :Residence_Status;
+                                           rdfs:range xsd:integer . 
+#  --------------------------- Property 5------------------------- 
+:hasDurationOfStay rdf:type owl:ObjectProperty ;
+                   rdfs:label "hasDurationOfStay"@IRI-based; 
+                   rdfs:label "hasDurationOfStay"@iri-based; 
+                   rdfs:label "hasDurationOfStay"@en; 
+                   rdfs:domain :Foreigners;
+                   rdfs:range :Duration_of_stay . 
+#  --------------------------- Property 6------------------------- 
+:from10to25years rdf:type owl:DatatypeProperty ;
+                 rdfs:label "from10to25years"@IRI-based; 
+                 rdfs:label "from10to25years"@iri-based; 
+                 rdfs:label "from 10 to 25 years"@en; 
+                 rdfs:domain :Duration_of_stay;
+                 rdfs:range xsd:integer . 
+#  --------------------------- Property 7------------------------- 
+:hasResidenceStatus rdf:type owl:ObjectProperty ;
+                    rdfs:label "hasResidenceStatus"@IRI-based; 
+                    rdfs:label "hasResidenceStatus"@iri-based; 
+                    rdfs:label "hasResidenceStatus"@en; 
+                    rdfs:domain :Foreigners;
+                    rdfs:range :Residence_Status . 
+#  --------------------------- Property 8------------------------- 
+:ForeignersAgegroup rdf:type owl:ObjectProperty ;
+                    rdfs:label "ForeignersAgegroup"@IRI-based; 
+                    rdfs:label "ForeignersAgegroup"@iri-based; 
+                    rdfs:label "ForeignersAgegroup"@en; 
+                    rdfs:domain :Foreigners;
+                    rdfs:range :Agegroup . 
+#  --------------------------- Property 9------------------------- 
+:regional_code rdf:type owl:DatatypeProperty ;
+               rdfs:label "regional_code"@IRI-based; 
+               rdfs:label "regional_code"@iri-based; 
+               rdfs:label "regional code"@en; 
+               rdfs:domain :City;
+               rdfs:range xsd:integer . 
+#  --------------------------- Property 10------------------------- 
+:hasPopulation rdf:type owl:ObjectProperty ;
+               rdfs:label "hasPopulation"@IRI-based; 
+               rdfs:label "hasPopulation"@iri-based; 
+               rdfs:label "hasPopulation"@en; 
+               rdfs:domain :City;
+               rdfs:range :Population . 
+#  --------------------------- Property 11------------------------- 
+:under2years rdf:type owl:DatatypeProperty ;
+             rdfs:label "under2years"@IRI-based; 
+             rdfs:label "under2years"@iri-based; 
+             rdfs:label "under 2 years"@en; 
+             rdfs:domain :Duration_of_stay;
+             rdfs:range xsd:integer . 
+#  --------------------------- Property 12------------------------- 
+:PopulationAgegroup rdf:type owl:ObjectProperty ;
+                    rdfs:label "PopulationAgegroup"@IRI-based; 
+                    rdfs:label "PopulationAgegroup"@iri-based; 
+                    rdfs:label "PopulationAgegroup"@en; 
+                    rdfs:domain :Population;
+                    rdfs:range :Agegroup . 
+#  --------------------------- Property 13------------------------- 
+:from_25_years_and_more rdf:type owl:DatatypeProperty ;
+                        rdfs:label "from_25_years_and_more"@IRI-based; 
+                        rdfs:label "from_25_years_and_more"@iri-based; 
+                        rdfs:label "from 25 years and more"@en; 
+                        rdfs:domain :Duration_of_stay;
+                        rdfs:range xsd:integer . 
+#  --------------------------- Property 14------------------------- 
+:totalGermans rdf:type owl:DatatypeProperty ;
+              rdfs:label "totalGermans"@IRI-based; 
+              rdfs:label "totalGermans"@iri-based; 
+              rdfs:label "totalGermans"@en; 
+              rdfs:domain :Germans;
+              rdfs:range xsd:integer . 
+#  --------------------------- Property 15------------------------- 
+:totalPopulation rdf:type owl:DatatypeProperty ;
+                 rdfs:label "totalPopulation"@IRI-based; 
+                 rdfs:label "totalPopulation"@iri-based; 
+                 rdfs:label "totalPopulation"@en; 
+                 rdfs:domain :Population;
+                 rdfs:range xsd:integer . 
+#  --------------------------- Property 16------------------------- 
+:with_EU_residence_permit rdf:type owl:DatatypeProperty ;
+                          rdfs:label "with_EU_residence_permit"@IRI-based; 
+                          rdfs:label "with_EU_residence_permit"@iri-based; 
+                          rdfs:label "with EU residence permit"@en; 
+                          rdfs:domain :Residence_Status;
+                          rdfs:range xsd:integer . 
+#  --------------------------- Property 17------------------------- 
+:GermanAgegroup rdf:type owl:ObjectProperty ;
+                rdfs:label "GermanAgegroup"@IRI-based; 
+                rdfs:label "GermanAgegroup"@iri-based; 
+                rdfs:label "GermanAgegroup"@en; 
+                rdfs:domain :Germans;
+                rdfs:range :Agegroup . 
+#  --------------------------- Property 18------------------------- 
+:between_15_and_65_years rdf:type owl:DatatypeProperty ;
+                         rdfs:label "between_15_and_65_years"@IRI-based; 
+                         rdfs:label "between_15_and_65_years"@iri-based; 
+                         rdfs:label "between 15 and 65 years"@en; 
+                         rdfs:domain :Agegroup;
+                         rdfs:range xsd:integer . 
+#  --------------------------- Property 19------------------------- 
+:totalForeigners rdf:type owl:DatatypeProperty ;
+                 rdfs:label "totalForeigners"@IRI-based; 
+                 rdfs:label "totalForeigners"@iri-based; 
+                 rdfs:label "totalForeigners"@en; 
+                 rdfs:domain :Foreigners;
+                 rdfs:range xsd:integer . 
+#  --------------------------- Property 20------------------------- 
+:older_than_65_years rdf:type owl:DatatypeProperty ;
+                     rdfs:label "older_than_65_years"@IRI-based; 
+                     rdfs:label "older_than_65_years"@iri-based; 
+                     rdfs:label "older than 65 years"@en; 
+                     rdfs:domain :Agegroup;
+                     rdfs:range xsd:integer . 
+#  --------------------------- Property 21------------------------- 
+:2to10years rdf:type owl:DatatypeProperty ;
+            rdfs:label "2to10years"@IRI-based; 
+            rdfs:label "2to10years"@iri-based; 
+            rdfs:label "2 to 10 years"@en; 
+            rdfs:domain :Duration_of_stay;
+            rdfs:range xsd:integer . 
+#  --------------------------- Property 22------------------------- 
+:fromEU rdf:type owl:DatatypeProperty ;
+        rdfs:label "fromEU"@IRI-based; 
+        rdfs:label "fromEU"@iri-based; 
+        rdfs:label "from EU"@en; 
+        rdfs:domain :Foreigners;
+        rdfs:range xsd:integer . 
+#  --------------------------- Property 23------------------------- 
+:wikiLink rdf:type owl:DatatypeProperty ;
+          rdfs:label "wikiLink"@IRI-based; 
+          rdfs:label "wikiLink"@en; 
+          rdfs:domain :City;
+          rdfs:range rdfs:Literal . 
+#  --------------------------- Property 24------------------------- 
+:from_non_EU rdf:type owl:DatatypeProperty ;
+             rdfs:label "from_non_EU"@IRI-based; 
+             rdfs:label "from_non_EU"@iri-based; 
+             rdfs:label "from non EU"@en; 
+             rdfs:domain :Foreigners;
+             rdfs:range xsd:integer . 
+#  --------------------------- Property 25------------------------- 
+:between_6_and_15_years rdf:type owl:DatatypeProperty ;
+                        rdfs:label "between_6_and_15_years"@IRI-based; 
+                        rdfs:label "between_6_and_15_years"@iri-based; 
+                        rdfs:label "between 6 and 15 years"@en; 
+                        rdfs:domain :Agegroup;
+                        rdfs:range xsd:integer . 
+#  --------------------------- Property 26------------------------- 
+:hasGermans rdf:type owl:ObjectProperty ;
+            rdfs:label "hasGermans"@IRI-based; 
+            rdfs:label "hasGermans"@iri-based; 
+            rdfs:label "hasGermans"@en; 
+            rdfs:domain :Population;
+            rdfs:range :Germans . 
+#  --------------------------- Property 27------------------------- 
+:with_temporary_residence_permit rdf:type owl:DatatypeProperty ;
+                                 rdfs:label "with_temporary_residence_permit"@IRI-based; 
+                                 rdfs:label "with_temporary_residence_permit"@iri-based; 
+                                 rdfs:label "with temporary residence permit"@en; 
+                                 rdfs:domain :Residence_Status;
+                                 rdfs:range xsd:integer . 
+#  --------------------------- Property 28------------------------- 
+:under_6_years rdf:type owl:DatatypeProperty ;
+               rdfs:label "under_6_years"@IRI-based; 
+               rdfs:label "under_6_years"@iri-based; 
+               rdfs:label "under 6 years"@en; 
+               rdfs:domain :Agegroup;
+               rdfs:range xsd:integer . 
+#  --------------------------- Property 29------------------------- 
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:label "name"@IRI-based; 
+      rdfs:label "name"@iri-based; 
+      rdfs:label "name"@en; 
+      rdfs:domain :City;
+      rdfs:range xsd:string . 
+#  --------------------------- Property 30------------------------- 
+:hasProtectionSeekers rdf:type owl:ObjectProperty ;
+                      rdfs:label "hasProtectionSeekers"@en; 
+                      rdfs:domain :Population;
+                      rdfs:range :ProtectionSeekers . 
+#  --------------------------- Property 31------------------------- 
+:recognized rdf:type owl:DatatypeProperty ;
+            rdfs:label "recognized"@en; 
+            rdfs:domain :ProtectionSeekers;
+            rdfs:range xsd:integer . 
+#  --------------------------- Property 32------------------------- 
+:cancelled rdf:type owl:DatatypeProperty ;
+           rdfs:label "cancelled"@en; 
+           rdfs:domain :ProtectionSeekers;
+           rdfs:range xsd:integer . 
+#  --------------------------- Property 33------------------------- 
+:open rdf:type owl:DatatypeProperty ;
+      rdfs:label "open"@en; 
+      rdfs:domain :ProtectionSeekers;
+      rdfs:range xsd:integer . 
+###  Class Definitions (Number of Classes) 8 ###
+#  --------------------------- Class  0------------------------- 
+:Agegroup rdf:type owl:Class; 
+          rdfs:label "Agegroup"@en . 
+#  --------------------------- Class  1------------------------- 
+:City rdf:type owl:Class; 
+      rdfs:label "City"@en . 
+#  --------------------------- Class  2------------------------- 
+:Duration_of_stay rdf:type owl:Class; 
+                  rdfs:label "Duration of stay"@en . 
+#  --------------------------- Class  3------------------------- 
+:Foreigners rdf:type owl:Class; 
+            rdfs:label "Foreigners"@en . 
+#  --------------------------- Class  4------------------------- 
+:Population rdf:type owl:Class; 
+            rdfs:label "Population"@en . 
+#  --------------------------- Class  5------------------------- 
+:Germans rdf:type owl:Class;  
+         rdfs:label "Germans"@en . 
+#  --------------------------- Class  6------------------------- 
+:Residence_Status rdf:type owl:Class; 
+                  rdfs:label "Residence Status"@en . 
+#  --------------------------- Class  7------------------------- 
+:ProtectionSeekers rdf:type owl:Class; 
+                   rdfs:label "ProtectionSeekers"@en . 

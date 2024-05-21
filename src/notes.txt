@@ -1,0 +1,39 @@
+RS	Regionalschlüssel
+NAME	Name des Landkreises / der kreisfreien Stadt
+
+INSGESAMT	Bevölkerung insgesamt
+
+AUSL_INSG	Ausländer insgesamt
+AZR_INSG	Ausländer insgesamt
+AZR_EU28_AUSL	EU-Ausländer (EU-28)
+AZR_NICHTEU_AUSL	Nicht-EU-Ausländer
+
+IIU6	Bevölkerung insgesamt unter 6 Jahren
+II6BU15	Bevölkerung insgesamt, 6 bis unter 15 Jahren
+II15BU65	Bevölkerung insgesamt, 15 bis unter 65 Jahren
+II65UM	Bevölkerung insgesamt, 65 Jahre und älter
+
+DIU6	Bevölkerung Deutsche insgesamt unter 6 Jahren
+DI6BU15	Bevölkerung Deutsche insgesamt, 6 bis unter 15 Jahren
+DI15BU65	Bevölkerung Deutsche insgesamt, 15 bis unter 65 Jahren
+DI65UM	Bevölkerung Deutsche insgesamt, 65 Jahre und älter
+
+AIU6	Bevölkerung Ausländer insgesamt unter 6 Jahren
+AI6BU15	Bevölkerung Ausländer insgesamt, 6 bis unter 15 Jahren
+AI15BU65	Bevölkerung Ausländer insgesamt, 15 bis unter 65 Jahren
+AI65UM	Bevölkerung Ausländer insgesamt, 65 Jahre und älter
+
+AZR_EUNIEDERL	Ausländer mit EU-Niederlassungsfreiheit
+AZR_UNBEFR	Ausländer mit unbefristetem Aufenthaltstitel 
+AZR_BEFR	Ausländer mit befristetem Aufenthaltstitel 
+AZR_GESTATT	Anteil der Ausländer mit Aufenthalts-Gestattung an allen Ausländern
+AZR_DULD	Anteil der Ausländer mit Aufenthalts-Duldung an allen Ausländern
+
+AZR_AFGHANISTAN	Afghanische Staatsangehörige
+AZR_IRAK	Irakische  Staatsangehörige
+AZR_SYRIEN	Syrische Staatsangehörige
+
+AZR_ADU2	Ausländer Aufenthaltsdauer unter 2 Jahre
+AZR_AD2BU10	Ausländer Aufenthaltsdauer 2 bis unter 10 Jahre
+AZR_AD10BU25	Ausländer Aufenthaltsdauer 10 bis unter 25 Jahre
+AZR_AD25UM	Ausländer Aufenthaltsdauer 25 Jahre und mehr

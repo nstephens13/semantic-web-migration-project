@@ -1,0 +1,92 @@
+Frage 1: Wie viele Ausländer leben in Leipzig?
+
+PREFIX mo: <https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#>
+SELECT ?name ?totalForeigners
+WHERE {
+  ?subject mo:name ?name;
+           mo:name "Leipzig"@en;
+           mo:year 2022;
+           mo:hasPopulation ?population ;
+           mo:regional_code 14713 .
+  ?population mo:hasForeigners ?Foreigners .
+  ?Foreigners mo:totalForeigners ?totalForeigners.
+}
+
+Frage 2: Wie viele Ausländer in Hamburg sind älter als 65?
+
+PREFIX mo: <https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#>
+SELECT ?year ?name ?older_than_65_years 
+WHERE {
+  ?subject mo:name ?name;
+           mo:year ?year;
+           mo:name "Hamburg"@en;
+           mo:hasPopulation ?population .
+  ?population mo:hasForeigners ?Foreigners . 
+  ?Foreigners mo:ForeignersAgegroup ?Agegroup.
+  ?Agegroup mo:older_than_65_years ?older_than_65_years .
+}
+
+
+Frage 3: Was ist die Wikiseite von Leipzig?
+
+PREFIX mo: <https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#>
+SELECT ?name ?wikiLink
+WHERE {
+  ?city mo:name ?name;
+           mo:year 2021;
+           mo:regional_code 14713; 
+           mo:name "Leipzig"@en; 
+		   mo:wikiLink ?wikiLink .
+}
+
+Frage 4: Wie viele Asylsuchende gibt es in Deutschland?
+
+PREFIX mo: <https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#>
+SELECT (SUM(?recognized) as ?totalRecognized)
+WHERE {
+  ?subject mo:name ?name ;
+           mo:hasPopulation ?population .
+  ?population mo:hasProtectionSeekers ?protectionSeekers .
+  ?protectionSeekers mo:recognized ?recognized .
+}
+
+Frage 5: Wie viele Ausländer leben in Franktfurt schon länger als 25 Jahren?
+
+PREFIX mo: <https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#>
+SELECT ?name ?from_25_years_and_more
+WHERE {
+  ?subject mo:name ?name;
+           mo:year 2022;
+           mo:name "Frankfurt am Main"@en;
+           mo:hasPopulation ?population .
+  ?population mo:hasForeigners ?foreigners .
+  ?foreigners mo:hasDurationOfStay ?duration_of_stay .
+  ?duration_of_stay mo:from_25_years_and_more ?from_25_years_and_more .
+}
+
+
+Frage 6: Wie hat sich die Anzahl der Ausländer zwischen 2021 und 2022 in Leipzig verändert?
+
+PREFIX mo: <https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#>
+SELECT ?name ?year ?totalForeigners
+WHERE {
+  ?subject mo:name ?name;
+           mo:name "Leipzig"@en;
+           mo:year ?year;
+           mo:hasPopulation ?population ;
+           mo:regional_code 14713 .
+  ?population mo:hasForeigners ?Foreigners .
+  ?Foreigners mo:totalForeigners ?totalForeigners.
+}
+
+Frage 7: Wie viele Ausländer leben schon länger als 25 Jahre in Deutschland?
+
+PREFIX mo: <https://gitlab.imn.htwk-leipzig.de/semantic-web-migration/migration-backend/-/blob/main/Ontology/migrationOntology.ttl#>
+SELECT (SUM(?from_25_years_and_more) AS ?total_25)
+WHERE {
+  ?subject mo:year 2022;
+           mo:hasPopulation ?population .
+  ?population mo:hasForeigners ?foreigners .
+  ?foreigners mo:hasDurationOfStay ?duration_of_stay .
+  ?duration_of_stay mo:from_25_years_and_more ?from_25_years_and_more .
+}

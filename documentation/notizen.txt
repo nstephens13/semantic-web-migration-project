@@ -1,0 +1,69 @@
+Forschungsarbeit: Semantic Web-Anwendung zur Analyse von Bevölkerungsdaten in deutschen Städten
+
+** INHALTSVERZEICHNIS
+
+1. Einleitung:
+Die vorliegende Forschungsarbeit widmet sich der Entwicklung und Umsetzung einer innovativen Semantic Web-Anwendung zur tiefgreifenden Analyse von Bevölkerungsdaten in verschiedenen Städten Deutschlands. Im Fokus steht die Verknüpfung von semantischer Modellierung und Datenanalyse, um Einblicke in die Bevölkerungsstruktur, Migrationstrends und demografische Veränderungen auf höchst präzise und bedeutungsvolle Weise zu gewinnen.
+
+1.1 Hintergrund:
+Die zunehmende Verfügbarkeit großer Mengen an Bevölkerungsdaten eröffnet die Möglichkeit, relevante Erkenntnisse über soziale, wirtschaftliche und demografische Phänomene zu gewinnen. Allerdings erfordert die Interpretation solcher Daten eine robuste Methodik, die über herkömmliche statistische Ansätze hinausgeht. Das Semantic Web bietet hierbei eine vielversprechende Lösung, indem es strukturierte, vernetzte und semantisch angereicherte Datenmodelle ermöglicht.
+
+1.2 Zielsetzung:
+Das Hauptziel dieser Forschungsarbeit besteht darin, die Synergie zwischen dem Semantic Web und der Analyse von Bevölkerungsdaten zu nutzen, um tiefgreifende Einblicke in das Verhalten, die Verteilung und die Veränderungen der Bevölkerung in verschiedenen deutschen Städten zu erhalten. Durch die Entwicklung einer spezialisierten Ontologie und die Verknüpfung von Bevölkerungsdaten in einem semantischen Kontext streben wir danach, Fragen von sozialer und demografischer Bedeutung zu beantworten und bisher unentdeckte Zusammenhänge aufzudecken.
+
+1.3 Methodik:
+Die Forschungsarbeit gliedert sich in mehrere Schritte:
+1. Datenerfassung und Modellierung: 
+Bevölkerungsdaten von verschiedenen deutschen Städten, einschließlich Informationen zu Ausländern, Schutzsuchenden, Altersgruppen und Aufenthaltsdauern, werden erfasst und in einer eigens entwickelten Ontologie modelliert.
+2. Tripelgenerierung und semantische Anreicherung:
+ Basierend auf der Ontologie werden Bevölkerungsdaten in Tripel umgewandelt und semantisch angereichert, um Beziehungen zwischen den Datenpunkten herzustellen.
+3. Integration in Graph Datenbank: 
+Die semantisch angereicherten Daten werden in eine Graph Datenbank hochgeladen, um eine effiziente Speicherung, Abfrage und Verknüpfung der Daten zu ermöglichen.
+
+4. SPARQL-basierte Analyse:
+Mithilfe von SPARQL-Abfragen werden gezielte Fragestellungen beantwortet, um Erkenntnisse über Bevölkerungsstruktur, Migrationstrends und demografische Veränderungen zu gewinnen.
+
+2. Relevante Datenquellen:
+Wir haben nur vollständige Datenquellen für das Jahr 2022 gefunden. Mit der Wayback Machine war es uns möglich, auch Daten für das Jahr 2021 zu erhalten. Deshalb haben wir uns nur auf diese Jahre fokussiert.
+
+2.1 Ausländeranteil (Bevölkerung insgesamt und Ausländer/-innen):
+Dieser Abschnitt behandelt den Anteil ausländischer Staatsangehöriger an der Gesamtbevölkerung Deutschlands. Die Daten stammen vom Statistischen Bundesamt (Destatis) und wurden bis zum 31. Dezember 2021 fortgeschrieben. Diese Daten sind auf den offiziellen Websites www.destatis.de und www.statistik-portal.de verfügbar.
+
+2.2 Ausländische Bevölkerung:
+Hier geht es um die Gesamtzahl der ausländischen Bevölkerung in Deutschland. Die Daten wurden zum 31. Dezember 2022 im Ausländerzentralregister (AZR) erfasst und sind ebenfalls auf www.destatis.de zu finden.
+
+2.3 Schutzsuchende:
+Dieser Abschnitt behandelt registrierte Schutzsuchende in Deutschland. Die Daten wurden ebenfalls bis zum 31. Dezember 2022 im Ausländerzentralregister (AZR) erfasst. Informationen über registrierte Schutzsuchende können aus der GENESIS-Online-Datenbank des Statistischen Bundesamts gewonnen werden. Die Daten sind in Form von Tabellen im XLSX-, XLS-, CSV- und HTML-Format herunterladbar. Zudem bietet das Statistische Bundesamt die Möglichkeit, die Daten in Diagrammen, interaktiven Karten anzuzeigen und eine API-Programmierschnittstelle zur automatisierten Datenverarbeitung zu nutzen.
+
+2.4 MediaWiki Action API: https://www.mediawiki.org/wiki/API:Main_page
+Um detaillierte Informationen über einzelne Städte zu erhalten, haben wir die MediaWiki-API genutzt, um Links zu den individuellen Städteseiten zu generieren. Diese Links ermöglichen den direkten Zugriff auf umfassende Informationen über jede Stadt, einschließlich Bevölkerungsstatistiken, geografischer Merkmale und kultureller Aspekte. Die Verwendung der MediaWiki-API hat es uns ermöglicht, gezielte Daten für verschiedene Städte abzurufen und eine umfassendere Analyse der regionalen Unterschiede und Entwicklungen vorzunehmen.
+
+3. Ontologie erstellen:
+Unsere Ontologie sollte den demografischen Wandel in Deutschland darstellen. Um die Ontologie zu erstellen, haben wir die Methode nach Grüninger und Fox genutzt. Um die richtigen Klassen und Eigenschaften zu bestimmen, haben wir Kompetenzfragen entwickelt, die mithilfe der Ontologie beantwortet werden können. Wir haben den WebVOWL Editor erfolgreich genutzt, um unsere Ontologie zu erstellen. Diese Plattform bietet eine interaktive Web-Benutzeroberfläche, die es uns ermöglicht, die Ontologie einfach und visuell ansprechend zu entwickeln. Die intuitive Schnittstelle erlaubt es uns, komplexe Beziehungen und Konzepte leicht zu gestalten und Änderungen in Echtzeit zu visualisieren. Dies erleichtert den Entwicklungsprozess und führt zu einer klareren Repräsentation unserer Daten und Strukturen. Link: https://service.tib.eu/webvowl/
+
+BILDER VON ONTOLOGIE
+
+4. Extraktion und Aufbereitung relevanter Daten:
+Die vorliegenden Daten wurden zunächst aus einer CSV-Datei extrahiert und anschließend in das JSON-Format umgewandelt. Diese Umwandlung erfolgte, um einen verbesserten Zugriff und eine flexiblere Verarbeitung der Daten zu ermöglichen. Die umgewandelten JSON-Daten bildeten die Grundlage für die nächste Entwicklungsphase. Hierbei wurde ein speziell entwickeltes TypeScript-Programm erstellt, das sich als äußerst leistungsfähig erwiesen hat. Das Programm ist in der Lage, die JSON-Daten zu lesen und gezielt darauf zuzugreifen. Dieser Zugriff bildet die Grundlage für die darauf folgende Datenverarbeitung.
+In einem weiteren Schritt wurde die Funktionalität implementiert, um die JSON-Daten in sogenannte Tripel zu transformieren. Diese Transformation war entscheidend, um semantische Beziehungen und Zusammenhänge zwischen den Datenpunkten herzustellen. Dabei kam eine vordefinierte Ontologie zum Einsatz, die es ermöglichte, die Daten in ein strukturiertes und aussagekräftiges Format zu bringen.
+Die generierten Tripel bilden die Grundlage für die Erstellung von Turtle-Dateien. Hierbei wurden nicht nur die eigentlichen Daten einbezogen, sondern auch Namensräume, die die semantische Bedeutung der Datenpunkte verdeutlichen. Die Turtle-Dateien stellen somit eine hochwertige und umfassende Darstellung der Daten dar, die sich ideal für weitere Analysen und Interpretationen eignet.
+Die Quellcodedateien in TypeScript zur Realisierung dieser Prozesskette sind verfügbar und befinden sich im übersichtlichen "src"-Ordner. Die Kompilierung der TypeScript-Dateien erfolgt mit dem Befehl 'tsc'. Die Ausführung des Befehls 'node tripleGenerator.js > data2022.ttl' führt zur Generierung der Turtle-Dateien, die die Daten in einer für Menschen lesbaren und maschinenverarbeitbaren Form präsentieren. Die generierten Tripel-Daten werden im Ordner "RDF Triples" in unserem GitLab-Repository gespeichert.
+
+5. SPARQL-Anfrage:
+Unsere .ttl-Dateien wurden erfolgreich in GraphDB hochgeladen. Dadurch können wir gezielte SPARQL-Abfragen auf Grundlage dieser Daten durchführen. Dies ermöglicht uns, spezifische Informationen zu unseren Kompetenzfragen zu extrahieren und zu analysieren. Die Interaktivität von GraphDB ermöglicht es uns, die Abfragen direkt zu testen und relevante Ergebnisse zu erhalten.
+
+5.1 Kompetenzfragen:
+1. Wie viele Ausländer leben in Leipzig?
+2. Wie viele Ausländer in Hamburg sind älter als 65 Jahre?
+3. Was ist die Wikiseite von Leipzig?
+4. Wie viele Asylsuchende gibt es in Deutschland?
+5. Wie viele Ausländer leben in Frankfurt schon länger als 25 Jahre?
+6. Wie hat sich die Anzahl der Ausländer zwischen 2021 und 2022 in Leipzig verändert?
+7. Wie viele Ausländer leben schon länger als 25 Jahre in Deutschland?
+
+BILDER IM DOKUMENTATIONSORDNER
+
+Unsere Kompetenzfragen wurden zufriedenstellend beantwortet.
+
+6. Ergebnisse und Bedeutung:
+Diese Forschungsarbeit fokussierte sich auf die Entwicklung einer Semantic Web-Anwendung zur Analyse von Bevölkerungsdaten in deutschen Städten. Die Kombination aus semantischer Modellierung und Datenanalyse eröffnete umfassende Einblicke in Bevölkerungsstrukturen, Migrationstrends und demografische Veränderungen. Die Methodik umfasste Datenerfassung, Tripelgenerierung, Integration in eine Graphdatenbank und SPARQL-Analysen. Die erzielten Ergebnisse beantworteten nicht nur erfolgreich unsere vorab definierten Kompetenzfragen, sondern tragen auch das Potenzial, soziale Dienstleistungen, Stadtplanung und politische Entscheidungsfindung fundierter zu gestalten.
